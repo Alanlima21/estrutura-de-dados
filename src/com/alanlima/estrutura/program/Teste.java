@@ -11,7 +11,7 @@ public class Teste {
 		vet.adiciona("elemento1");
 		vet.adiciona("elemento2");
 	
-		System.out.println(vet.busca(0));
+		System.out.println(vet.busca("Elemento2"));
 	}
 
 }
