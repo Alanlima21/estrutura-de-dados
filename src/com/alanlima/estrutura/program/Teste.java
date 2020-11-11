@@ -10,10 +10,8 @@ public class Teste {
 		
 		vet.adiciona("elemento1");
 		vet.adiciona("elemento2");
-		
-		System.out.println(vet.tamanho());
-		
-		System.out.println(vet);
+	
+		System.out.println(vet.busca(0));
 	}
 
 }
