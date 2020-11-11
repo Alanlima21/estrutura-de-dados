@@ -6,10 +6,14 @@ public class Teste {
 
 	public static void main(String[] args) {
 	
-		Vetor vet = new Vetor(5);
+		Vetor vet = new Vetor(10);
 		
 		vet.adiciona("elemento1");
 		vet.adiciona("elemento2");
+		
+		System.out.println(vet.tamanho());
+		
+		System.out.println(vet);
 	}
 
 }
