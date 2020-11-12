@@ -11,8 +11,8 @@ public class Vetor {
 	}
 
 	/*
-	 * public void adiciona(String elemento) { for(int i=0; i<elementos.length; i++)
-	 * { if(elementos[i] == null) { elementos[i] = elemento; break; } } }
+	 * public void adiciona(String elemento) { for(int i=0; i<elementos.length;
+	 * i++){ if(elementos[i] == null) { elementos[i] = elemento; break; } } }
 	 */
 
 	public boolean adiciona(String elemento) {
@@ -75,6 +75,22 @@ public class Vetor {
 			}
 			this.elementos = elementosNovos;
 		}
+	}
+	
+	// B G D E F = posicao a ser removida é 1(G)
+	// 0 1 2 3 4 = tamanho é 5
+	//vetor[1] = vetor[2]
+	//vetor[2] = vetor[3]
+	//vetor [3] = vetor[4]
+	public void remove(int posicao) {
+		if (!(posicao >= 0 && posicao < tamanho)) {
+			throw new IllegalArgumentException("Posição inválida");
+		}
+
+		for (int i = posicao; i < this.tamanho - 1; i++) {
+			this.elementos[i] = this.elementos[i + 1];
+		}
+		this.tamanho--;
 	}
 
 	@Override
