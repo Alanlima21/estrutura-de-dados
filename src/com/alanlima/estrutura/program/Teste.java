@@ -6,7 +6,7 @@ public class Teste {
 
 	public static void main(String[] args) {
 
-		Vetor vet = new Vetor(10);
+		Vetor vet = new Vetor(3);
 
 		vet.adiciona("B");
 		vet.adiciona("C");
@@ -14,10 +14,7 @@ public class Teste {
 		vet.adiciona("F");
 		vet.adiciona("G");
 
-		System.out.println(vet);
-		vet.adiciona(0, "A");
-		System.out.println(vet);
-		vet.adiciona(3, "D");
+		
 		System.out.println(vet);
 
 	}
