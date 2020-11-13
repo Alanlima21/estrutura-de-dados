@@ -1,26 +1,33 @@
 package com.alanlima.estrutura.program;
 
-import com.alanlima.estrutura.domain.Vetor;
+import com.alanlima.estrutura.domain.Contato;
+import com.alanlima.estrutura.domain.VetorObjetos;
 
 public class Teste {
 
 	public static void main(String[] args) {
 
-		Vetor vet = new Vetor(3);
-
-		vet.adiciona("B");
-		vet.adiciona("G");
-		vet.adiciona("D");
-		vet.adiciona("E");
-		vet.adiciona("F");
-
+		VetorObjetos vetor = new VetorObjetos(3);
 		
-		System.out.println(vet);
+		vetor.adiciona(5.2);
+		vetor.adiciona(3);
+		vetor.adiciona("Alan");
 		
-		vet.remove(1);
+		System.out.println("Tamanho: " + vetor.tamanho());
 		
-		System.out.println(vet);
-
+		System.out.println(vetor);
+		System.out.println("------------");
+		
+		Contato c1 = new Contato("Contato1", "54845163", "contato1@gmail.com");
+		Contato c2 = new Contato("Contato2", "84874125", "contato2@gmail.com");
+		Contato c3 = new Contato("Contato3", "13278008", "contato3@gmail.com");
+		
+		vetor.adiciona(c1);
+		vetor.adiciona(c2);
+		vetor.adiciona(c3);
+		
+		System.out.println(vetor);
+		
 	}
 
 }
