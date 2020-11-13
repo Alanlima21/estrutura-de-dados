@@ -1,19 +1,39 @@
 package com.alanlima.estrutura.program;
 
-import com.alanlima.estrutura.domain.VetorGenerics;
+import java.util.ArrayList;
 
 public class Teste {
 
 	public static void main(String[] args) {
 
-		VetorGenerics<String> vetor = new VetorGenerics<>(2);
+		ArrayList<String> arrayList = new ArrayList<>();
 		
-		vetor.adiciona("elemento1");
-		vetor.adiciona("elemento2");
-	
+		arrayList.add("A");
+		arrayList.add("C");
 		
-		System.out.println(vetor);
+		System.out.println(arrayList);
 		
+		arrayList.add(1, "B");
+		
+		System.out.println(arrayList);
+		
+		boolean existe = arrayList.contains("A");
+		
+		if(existe) {
+			System.out.println("Elemento existe");
+		}else {
+			System.out.println("Elemento não existe");
+		}
+		
+		int pos = arrayList.indexOf("B");
+		System.out.println(pos);
+		
+		System.out.println(arrayList.get(2));
+		
+		arrayList.remove(0);
+		arrayList.remove("B");
+		
+		System.out.println(arrayList);
 	}
 
 }
