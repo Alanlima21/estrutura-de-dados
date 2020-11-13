@@ -1,16 +1,16 @@
 package com.alanlima.estrutura.domain;
 
-public class VetorObjetos{
+public class VetorGenerics<T>{
 
-	private Object[] elementos;
+	private T[] elementos;
 	private int tamanho;
 
-	public VetorObjetos(int capacidade) {
-		this.elementos = new Object[capacidade];
+	public VetorGenerics(int capacidade) {
+		this.elementos = (T[]) new Object[capacidade];
 		this.tamanho = 0;
 	}
 
-	public boolean adiciona(Object elemento) {
+	public boolean adiciona(T elemento) {
 		this.aumentaCapacidade();
 
 		if (this.tamanho < this.elementos.length) {
@@ -24,7 +24,7 @@ public class VetorObjetos{
 	// 0 1 2 3 4 5 6 = tamanho é 5
 	// B C E F G + +
 	//
-	public boolean adiciona(int posicao, Object elemento) {
+	public boolean adiciona(int posicao, T elemento) {
 		if (!(posicao >= 0 && posicao < tamanho)) {
 			throw new IllegalArgumentException("Posição inválida");
 		}
@@ -64,7 +64,7 @@ public class VetorObjetos{
 
 	private void aumentaCapacidade() {
 		if (this.tamanho == this.elementos.length) {
-			Object[] elementosNovos = new Object[this.elementos.length * 2];
+			T[] elementosNovos = (T[]) new Object[this.elementos.length * 2];
 			for (int i = 0; i < this.elementos.length; i++) {
 				elementosNovos[i] = elementos[i];
 			}
