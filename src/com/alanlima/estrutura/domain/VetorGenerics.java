@@ -1,6 +1,6 @@
 package com.alanlima.estrutura.domain;
 
-public class VetorGenerics<T>{
+public class VetorGenerics<T> {
 
 	private T[] elementos;
 	private int tamanho;
@@ -42,11 +42,15 @@ public class VetorGenerics<T>{
 		return true;
 	}
 
-	public Object busca(int posicao) {
+	public T busca(int posicao) {
 		if (!(posicao >= 0 && posicao < tamanho)) {
 			throw new IllegalArgumentException("Posição inválida");
 		}
 		return this.elementos[posicao];
+	}
+
+	public boolean contem(T obj) {
+		return busca(obj) > -1;
 	}
 
 	public int busca(Object elemento) {
@@ -71,12 +75,12 @@ public class VetorGenerics<T>{
 			this.elementos = elementosNovos;
 		}
 	}
-	
+
 	// B G D E F = posicao a ser removida é 1(G)
 	// 0 1 2 3 4 = tamanho é 5
-	//vetor[1] = vetor[2]
-	//vetor[2] = vetor[3]
-	//vetor [3] = vetor[4]
+	// vetor[1] = vetor[2]
+	// vetor[2] = vetor[3]
+	// vetor [3] = vetor[4]
 	public void remove(int posicao) {
 		if (!(posicao >= 0 && posicao < tamanho)) {
 			throw new IllegalArgumentException("Posição inválida");
@@ -86,6 +90,37 @@ public class VetorGenerics<T>{
 			this.elementos[i] = this.elementos[i + 1];
 		}
 		this.tamanho--;
+	}
+	
+	public int ultimoIndice(T elemento) {
+		
+		for(int i=tamanho-1; i>=0; i--) {
+			if(elementos[i].equals(elemento)) {
+				 return i;
+			}
+		}
+		return -1;
+	}
+	
+	public T obtem(int posicao) {
+		return  busca(posicao);
+	}
+	
+	public void limpar() {
+		//this.tamanho = 0;
+		
+		for(int i=0; i<tamanho; i++) {
+			this.elementos[i] = null;
+		}
+		this.tamanho =0;
+	}
+	
+	public void remove(T elemento) {
+		
+		int posicao = busca(elemento);
+		if(posicao > -1) {
+			remove(posicao);
+		}
 	}
 
 	@Override

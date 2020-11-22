@@ -93,6 +93,8 @@ public class Vetor {
 		this.tamanho--;
 	}
 
+	
+	
 	@Override
 	public String toString() {
 		StringBuilder s = new StringBuilder();
