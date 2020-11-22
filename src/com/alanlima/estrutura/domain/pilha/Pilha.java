@@ -11,4 +11,8 @@ public class Pilha<T> extends EstruturaEstatica<T> {
 	public Pilha(int capacidade) {
 		super();
 	}
+	
+	public void empilha(T elemento) {
+		super.adiciona(elemento);
+	}
 }
