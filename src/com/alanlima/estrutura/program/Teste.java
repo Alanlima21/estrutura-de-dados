@@ -9,12 +9,12 @@ public class Teste {
 
 		Pilha<Integer> pilha = new Pilha<>();
 		
-		for(int i=1; i<=10; i++) {
-			pilha.empilha(i);
-		}
+	
+		System.out.println(pilha.estaVazia());
 		
-		System.out.println(pilha);
-		System.out.println(pilha.tamanho());
+		pilha.empilha(1);
+		
+		System.out.println(pilha.estaVazia());
 	}
 
 }
