@@ -10,11 +10,12 @@ public class Teste {
 		Pilha<Integer> pilha = new Pilha<>();
 		
 	
-		System.out.println(pilha.estaVazia());
 		
+		System.out.println(pilha.topo());
 		pilha.empilha(1);
-		
-		System.out.println(pilha.estaVazia());
+		pilha.empilha(2);
+		System.out.println(pilha);
+		System.out.println(pilha.topo());
 	}
 
 }
