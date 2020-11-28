@@ -16,5 +16,9 @@ public class Fila<T> extends EstruturaEstatica<T> {
 		this.adiciona(object);
 	}
 	
+	public T espiar() {
+		return this.elementos[0];
+	}
+	
 	
 }

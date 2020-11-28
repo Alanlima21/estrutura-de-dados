@@ -16,6 +16,7 @@ public class Teste {
 		fila.enfileira(2);
 		fila.enfileira(3);
 		System.out.println(fila);
+		System.out.println(fila.espiar());
 	}
 	
 }
