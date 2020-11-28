@@ -1,23 +1,20 @@
 package com.alanlima.estrutura.program;
 
-import java.util.Scanner;
-
-import com.alanlima.estrutura.domain.fila.Fila;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class Teste {
 
 	public static void main(String[] args) throws Exception {
 		
-		Fila<Integer> fila = new Fila<>();
+		Queue<Integer> fila = new LinkedList<>();
 		
-		System.out.println(fila.estaVazia());
-		System.out.println(fila.tamanho());
+		fila.add(1);
+		fila.add(2);
 		
-		fila.enfileira(2);
-		fila.enfileira(3);
 		System.out.println(fila);
-		System.out.println(fila.espiar());
-		System.out.println(fila.desenfileira());
+		System.out.println(fila.peek());
+		System.out.println(fila.remove());
 		System.out.println(fila);
 	}
 	
